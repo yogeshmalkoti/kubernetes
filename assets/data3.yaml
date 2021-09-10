@@ -1,0 +1,15 @@
+---
+name: Afhunik
+owner: Adhunik@uobgroup.com
+Application: NPP onboarding
+CRQ: 3456
+environments: dev
+namespace: evs
+topics: 
+  - { name: Adhunik, compression_type: lx4, retention: 7, partition: 3, replication: 3, instance_name: kfkaunpp, cleanup_policy: delete }
+  - { name: kelvin, compression_type: lx4, retention: 7, partition: 3, replication: 3, instance_name: kfkaunpp, cleanup_policy: delete } 
+
+users:
+  - { user_name: lolando, user_type: producer, topic_name: write_topic, schema_access: write, autorization: write, instance_name: kfkaunpp } 
+  - { user_name: liza, user_type: consumer, topic_name: read_topic, consumer_group: read_topic.cg, schema_access: read, autorization: read, instance_name: kfkaunpp}
+

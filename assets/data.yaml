@@ -1,0 +1,16 @@
+---
+name: Yogesh Malkoti
+owner: yogesh.malkoti@uobgroup.com
+Application: RDP onboarding
+CRQ: 12345
+environments: dev
+namespace: evs
+topics: 
+  - { name: write_topic, compression_type: lx4, retention: 7, partition: 3, replication: 3, instance_name: kfkaunpp, cleanup_policy: delete }
+  - { name: read_topic, compression_type: lx4, retention: 7, partition: 3, replication: 3, instance_name: kfkaunpp, cleanup_policy: delete } 
+
+users:
+  - { user_name: write_user, user_type: producer, topic_name: write_topic, schema_access: write, autorization: write, instance_name: kfkaunpp } 
+  - { user_name: read_user, user_type: consumer, topic_name: read_topic, consumer_group: read_topic.cg, schema_access: read, autorization: read, instance_name: kfkaunpp}
+
+

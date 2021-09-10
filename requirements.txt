@@ -1,0 +1,13 @@
+appdirs==1.4.3
+functools32==3.2.3.post2; python_version < '3.0'
+jsonschema==2.6.0
+packaging==16.8
+pycodestyle==2.3.1
+pyparsing==2.2.0
+simplejson==3.10.0
+six==1.10.0
+pyyaml==5.4.1
+requests>=2.24.0,<3.0
+python_dateutil>=2.5.3,<3.0.0
+ibm_cloud_sdk_core>=3.8.0,<4.0.0
+eventstreams_sdk>=1.1.0
